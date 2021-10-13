@@ -1,0 +1,16 @@
+﻿@{
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label>A :</label><input type="number" name="A" />
+    </div>
+    <div>
+        <label>B :</label><input type="number" name="B" />
+    </div>
+    <button type="submit">Compute</button>
+</form>
+
+<h2>
+    @(ViewBag.Result == null ? "" : $"Kết quả là: X = {ViewBag.Result}")
+</h2>

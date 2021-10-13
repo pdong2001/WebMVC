@@ -1,0 +1,15 @@
+:root {
+    --orange: #f4a261;
+    --yellow: #FFCA3A;
+    --green: #38b000;
+    --blue: #034780;
+    --black: #000000;
+    --red: #FF595E;
+    --dark: rgb(200, 200, 200);
+    --fs-small: 13px;
+    --fs-small-m: 14px;
+    --fs-medium: 18px;
+    --fs-medium-l: 18px;
+    --fs-m-large: 20px;
+    --fs-large: 26px;
+}

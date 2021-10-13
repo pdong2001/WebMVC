@@ -1,0 +1,36 @@
+﻿@{
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label for="a">A : </label><input id="a" type="number" name="A" placeholder="Nhập A" />
+    </div>
+    <div>
+        <label for="b">B : </label><input id="b" type="number" name="B" placeholder="Nhập B" />
+    </div>
+    <div>
+        <label for="c">C : </label><input id="c" type="number" name="C" placeholder="Nhập C" />
+    </div>
+    <button type="submit">Compute</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    var data = ViewBag.Result;
+    @if (data.GetType() == typeof(double[]))
+    {
+        <h2>"Kết quả:"</h2>
+        <ul>
+            <li>
+                X1 = @ViewBag.Result[0]
+            </li>
+            <li>
+                X2 = @ViewBag.Result[1]
+            </li>
+        </ul>
+    }
+    else
+    {
+        <h2>Kết quả : @ViewBag.Result</h2>
+    }
+}

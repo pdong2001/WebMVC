@@ -1,0 +1,226 @@
+﻿@{ 
+    Layout = "_NewsLayout";
+}
+@using Models.Entity
+@model Article
+
+ <main>
+        <!-- directional start -->
+        <section class="directional">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-12">
+                        <ul class="directional-list">
+                            <li class="directional-item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </li>
+                            <li class="directional-item">
+                                <a href="">Trang chủ</a>
+                                <span>></span>
+                            </li>
+                            <li class="directional-item">
+                                <a href="">Tin tức</a>
+                                <span>></span>
+                            </li>
+                            <li class="directional-item">
+                                <a href="">Công tác Đảng và Đoàn thể</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- directional end -->
+        <!-- list article start -->
+        <section class="list-article">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-9 m-12 c-12">
+                        <div class="row">
+                            <div class="col l-12 c-12">
+                                <div class="content">
+                                    <div class="title">
+                                        <h1>
+                                            @Model.Title
+                                        </h1>
+                                    </div>
+                                    <div class="time">
+                                            @Model.UpTime
+                                        Thứ năm - 01/07/2021 16:32
+                                    </div>
+                                    <div>
+                                        <p>
+                                            @Model.Content
+                                        </p>
+                                    </div>
+                                    <div class="end">
+                                        Trung tâm Tuyển sinh và Truyền thông./.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row keys">
+                            <div class="col l-12">
+                                <h4>Từ khoá:</h4>
+                                <ul class="key-list">
+                                    <li class="key-item">
+                                        <a href="">
+                                            vắc xin covid
+                                        </a>
+                                    </li>
+                                    <li class="key-item">
+                                        <a href="">
+                                            thông báo khẩn
+                                        </a>
+                                    </li>
+                                    <li class="key-item">
+                                        <a href="">
+                                            nghỉ học
+                                        </a>
+                                    </li>
+                                    <li class="key-item">
+                                        <a href="">
+                                            lịch thi
+                                        </a>
+                                    </li>
+                                    <li class="key-item">
+                                        <a href="">
+                                            thời khoá biểu
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row tags">
+                            <div class="col l-12">
+                                <h4>Tags</h4>
+                                <ul class="tag-list">
+                                    <li class="tag-item">
+                                        <a href="">
+                                            vắc xin covid
+                                        </a>
+                                    </li>
+                                    <li class="tag-item">
+                                        <a href="">
+                                            thông báo khẩn
+                                        </a>
+                                    </li>
+                                    <li class="tag-item">
+                                        <a href="">
+                                            nghỉ học
+                                        </a>
+                                    </li>
+                                    <li class="tag-item">
+                                        <a href="">
+                                            lịch thi
+                                        </a>
+                                    </li>
+                                    <li class="tag-item">
+                                        <a href="">
+                                            thời khoá biểu
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="interactive">
+                            <div>
+                                <button class="like">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    <span>like</span>
+                                    <span>690</span>
+                                </button>
+                                <button class="share">
+                                    Share
+                                </button>
+                            </div>
+                            <form>
+                                <textarea rows="7" style="width: 100%;" placeholder="Ý kiến của bạn"></textarea>
+                                <button>Gửi</button>
+                                <div style="clear: both;"></div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col l-3 m-12 c-12">
+                        <div class="search_sidebar">
+                            <h2>TÌM KIẾM</h2>
+                            <form>
+                                <div>
+                                    <input type="text" placeholder="Nhập nội dung tìm kiếm">
+                                    <button>
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="news">
+                            <h2>
+                                TIN TỨC
+                            </h2>
+                            <ul class="news-list">
+                                <li class="news-item">
+                                    <a href="">
+                                        Tin hoạt động
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="">
+                                        Nhân vật - Sự kiện
+                                    </a>
+                                </li>
+                                <li class="news-item news-item--selected">
+                                    <a href="">
+                                        Thông báo
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="">
+                                        Lịch công tác tuần
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="">
+                                        Theo dòng sự kiện
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="relate-news">
+                            <h2>TIN LIÊN QUAN</h2>
+                            <ul class="relate-news__list">
+                                <li class="relate-news__item">
+                                    <a href="">
+                                        <img src="../../resources/img/relate-news/1.jpg" alt="">
+                                        <p>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN HỖ TRỢ 196 TRIỆU ĐỒNG CHO SINH VIÊN GẶP KHÓ KHĂN DO ẢNH HƯỞNG CỦA DỊCH BỆNH COVID-19 (ĐỢT 2).</p>
+                                    </a>
+                                </li>
+                                <li class="relate-news__item">
+                                    <a href="">
+                                        <img src="../../resources/img/relate-news/1.jpg" alt="">
+                                        <p>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN HỖ TRỢ 196 TRIỆU ĐỒNG CHO SINH VIÊN GẶP KHÓ KHĂN DO ẢNH HƯỞNG CỦA DỊCH BỆNH COVID-19 (ĐỢT 2).</p>
+                                    </a>
+                                </li>
+                                <li class="relate-news__item">
+                                    <a href="">
+                                        <img src="../../resources/img/relate-news/1.jpg" alt="">
+                                        <p>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN HỖ TRỢ 196 TRIỆU ĐỒNG CHO SINH VIÊN GẶP KHÓ KHĂN DO ẢNH HƯỞNG CỦA DỊCH BỆNH COVID-19 (ĐỢT 2).</p>
+                                    </a>
+                                </li>
+                                <li class="relate-news__item">
+                                    <a href="">
+                                        <img src="../../resources/img/relate-news/1.jpg" alt="">
+                                        <p>TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT HƯNG YÊN HỖ TRỢ 196 TRIỆU ĐỒNG CHO SINH VIÊN GẶP KHÓ KHĂN DO ẢNH HƯỞNG CỦA DỊCH BỆNH COVID-19 (ĐỢT 2).</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- list article end -->
+    </main>
+

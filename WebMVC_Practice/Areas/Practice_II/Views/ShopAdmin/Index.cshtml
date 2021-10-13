@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@model Models.Entity.User[]
+
+<table class="table table-hover table-striped bg-white">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(m => m.FirstOrDefault().Name)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(m => m.FirstOrDefault().AccName)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(m => m.FirstOrDefault().PhoneNumber)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(m => m.FirstOrDefault().Email)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(m => m.FirstOrDefault().RegistryDate)
+            </th>
+            <th style="width:5rem">
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">
+                    @item.Name
+                </th>
+                <td>
+                    @item.AccName
+                </td>
+                <td>
+                    @item.PhoneNumber
+                </td>
+                <td>
+                    @item.Email
+                </td>
+                <td>
+                    @item.RegistryDate.ToShortDateString()
+                </td>
+                <td class="d-flex justify-content-around">
+                    <button class="btn btn-outline btn-primary">
+                        <i class=" bi bi-pen"></i>
+                    </button>
+                    <button class="btn btn-outline btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

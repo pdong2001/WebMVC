@@ -1,0 +1,45 @@
+header .logo-bar {
+    margin: 20px 0px;
+}
+
+.logo,
+.slogan {
+    --logo-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: var(--logo-size);
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+header .logo>div {
+    margin-left: 15px;
+}
+
+header .logo img {
+    height: var(--logo-size);
+    width: var(--logo-size);
+    max-height: unset;
+    max-width: unset;
+}
+
+header .logo h1 {
+    font-size: var(--fs-medium-l);
+    color: var(--blue);
+}
+
+header .logo span {
+    font-size: var(--fs-medium);
+    color: var(--red);
+    font-weight: 700;
+}
+
+header .slogan span {
+    font-size: var(--fs-large);
+    font-weight: 700;
+    color: var(--green);
+    text-align: center;
+}

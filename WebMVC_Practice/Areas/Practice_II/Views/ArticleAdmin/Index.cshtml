@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@model Models.Entity.Article[]
+
+    <table class="table table-hover table-striped bg-white">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(m => m.FirstOrDefault().Title)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(m => m.FirstOrDefault().Type)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(m => m.FirstOrDefault().UpTime)
+                </th>
+                <th style="width:5rem"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <th scope="row">
+                    @item.Title
+                </th>
+                <td>
+                    @item.Type.Name
+                </td>
+                <td>
+                    @item.UpTime.ToShortDateString()
+                </td>
+                <td class="d-flex justify-content-around">
+                    <button class="btn btn-outline btn-primary">
+                        <i class=" bi bi-pen"></i>
+                    </button>
+                    <button class="btn btn-outline btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>

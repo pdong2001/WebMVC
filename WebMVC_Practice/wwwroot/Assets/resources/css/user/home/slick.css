@@ -1,0 +1,8 @@
+.slick-arrow {
+    display: none !important;
+    transform: translateY(-45px);
+}
+
+.slick-slider:hover .slick-arrow {
+    display: block !important;
+}

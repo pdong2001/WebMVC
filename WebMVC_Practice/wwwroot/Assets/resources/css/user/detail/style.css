@@ -1,0 +1,152 @@
+.content {
+    border: 1px solid #ddd;
+}
+
+.content>div {
+    margin: 10px;
+}
+
+.content .title {
+    display: flex;
+    justify-content: center;
+}
+
+.content .end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tags,
+.keys {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.tags h4 {
+    margin-bottom: 8px;
+}
+
+.tag-list,
+.key-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    margin-bottom: 8px;
+    padding: 5px 8px;
+    background-color: #E5E5E5;
+    margin-right: 8px;
+    font-size: var(--fs-small-m);
+}
+
+.key-item {
+    margin-bottom: 8px;
+    padding: 5px 8px;
+    border: 1px solid #E5E5E5;
+    margin-right: 8px;
+    font-size: var(--fs-small-m);
+}
+
+.keys {
+    margin-bottom: 8px;
+}
+
+.keys h4 {
+    padding: 5px 8px 5px 0px;
+}
+
+.keys>div {
+    display: flex;
+}
+
+.news,
+.relate-news {
+    margin-top: 25px;
+}
+
+.news h2,
+.relate-news h2 {
+    border-bottom: 2px solid var(--black);
+    display: inline-block;
+}
+
+.news-list {
+    list-style: none;
+}
+
+.news-item {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item--selected {
+    color: #F2363C;
+}
+
+.relate-news__list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.relate-news__item {
+    margin-bottom: 15px;
+}
+
+.relate-news__item a {
+    display: flex;
+    /* align-items: center; */
+}
+
+.relate-news__item a img {
+    height: 75px;
+    width: 75px;
+    margin-right: 10px;
+}
+
+.relate-news__item a p {
+    font-size: var(--fs-small);
+}
+
+.interactive .like,
+.interactive .share {
+    background-color: #0082FE;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.interactive>div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.interactive>form>textarea {
+    box-shadow: none;
+    border: 1px solid #eeeeee;
+    outline-color: #eeeeee;
+    font-size: var(--fs-medium-l);
+    padding-left: 10px;
+    padding-top: 10px;
+    resize: none;
+    margin: 15px 0 10px 0;
+}
+
+.interactive>form>button {
+    font-size: 15px;
+    padding: 8px 22px;
+    line-height: 1.38;
+    color: #fff;
+    background-color: #222222;
+    border-color: #222222;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,45 @@
+@import './news.css';
+@import './scrollToMenu.css';
+@import './scrollToMenu.css';
+@import './contentMenu.css';
+@import './notice.css';
+@import './schedule.css';
+@import './activity.css';
+.content-row {
+    margin-bottom: 30px !important;
+}
+
+.title {
+    margin: 5px 0px 20px 0px;
+}
+
+.title h2 {
+    font-size: var(--fs-large);
+    font-weight: 600;
+    color: var(--blue);
+    display: inline;
+    padding: 10px 0px;
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: Inter, Roboto, Arial, sans-serif;
+}
+
+.title.small h2 {
+    font-size: var(--fs-medium-l);
+}
+
+@media (max-width: 983px) {
+    .activity {
+        flex-direction: column-reverse;
+    }
+    .activity :is(.right, .left) {
+        width: 100%;
+    }
+}
+
+@media (max-width: 740px) {
+     :root {
+        --fs-medium-l: 16px;
+    }
+}

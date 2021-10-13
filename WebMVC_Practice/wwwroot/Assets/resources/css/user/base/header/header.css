@@ -1,0 +1,7 @@
+@import './headbar.css';
+@import './logo.css';
+@import './menu.css';
+header {
+    width: 100%;
+    background-color: white;
+}

@@ -1,0 +1,105 @@
+﻿@{
+}
+@using WebMVC_Practice.Areas.Practice_I.Models
+@model List<Student>;
+
+<form method="post" asp-action="add" class="container">
+    <div>
+        <label class="col-4 pl-5">Mã SV</label><input class="col-8" type="text" placeholder="Mã SV" name="ID" />
+    </div>
+    <div>
+        <label class="col-4 pl-5">Họ và tên</label><input class="col-8" type="text" placeholder="Họ và tên" name="Name" />
+    </div>
+    <div>
+        <label class="col-4 pl-5">Ngày sinh</label><input class="col-8" type="date" placeholder="Ngày sinh" name="Birth" />
+    </div>
+    <div>
+        <label class="col-4 pl-5">Quê quán</label><input class="col-8" type="text" placeholder="Quê quán" name="Domicile" />
+    </div>
+    <div>
+        <label class="col-4 pl-5">Điểm toán</label><input min="0" max="10" class="col-8" type="number" placeholder="Điểm toán" name="Math" />
+    </div>
+    <div>
+        <label class="col-4 pl-5">Điểm hóa</label><input min="0" max="10" class="col-8" type="number" placeholder="Điểm hóa" name="Chemistry" />
+    </div>
+    <div class="offset-4">
+        <button type="submit" class="btn btn-outline-danger">Submit</button>
+    </div>
+</form>
+
+<script>
+$(document).ready(function () {
+    $("table thead th").click(function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url:"@Url.ActionLink("Sort")",
+            data: {
+                ColNumber: $("table thead th").index($(event.currentTarget)) + 1
+            },
+            success: function (result) {
+                window.location.href = "@Url.ActionLink("index")";
+            }
+        });
+    });
+});
+</script>
+
+<div class="container py-5">
+    <table class="table table-hover col-12">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col" style="cursor:pointer">
+                    Mã SV
+                </th>
+                <th scope="col" style="cursor:pointer">
+                    Họ và tên
+                </th>
+                <th scope="col" style="cursor:pointer">
+                    Ngày sinh
+                </th>
+                <th scope="col" style="cursor:pointer">
+                    Quê quán
+                </th>
+                <th scope="col" style="cursor:pointer">
+                    Điểm toán
+                </th>
+                <th scope="col" style="cursor:pointer">
+                    Điểm hóa
+                </th>
+                <th scope="col" style="cursor:pointer">
+                    Tổng điểm
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">
+                        @item.ID
+                    </th>
+                    <th>
+                        @item.Name
+                    </th>
+                    <th>
+                        @item.Birth.ToShortDateString()
+                    </th>
+                    <th>
+                        @item.Domicile
+                    </th>
+                    <th>
+                        @item.Math
+                    </th>
+                    <th>
+                        @item.Chemistry
+                    </th>
+                    <th>
+                        @item.TotalMark
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

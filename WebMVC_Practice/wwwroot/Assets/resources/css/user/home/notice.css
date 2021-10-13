@@ -1,0 +1,55 @@
+.notice {
+    --size: 100px;
+    --date-ratio: 0.7;
+    position: relative;
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.notice .date {
+    height: calc(var(--size) *var(--date-ratio));
+    width: calc(var(--size) *var(--date-ratio));
+    background-color: var(--green);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    position: absolute;
+}
+
+.notice .date .month {
+    border-top: 2px solid white;
+}
+
+.notice .content {
+    background-color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: calc(var(--size) * 0.1) calc(var(--size) * (var(--date-ratio) - 0.2));
+    padding-right: 5px;
+    margin-left: calc(var(--size) * var(--date-ratio) * 0.5);
+    width: 100%;
+}
+
+.notice .content p {
+    text-overflow: ellipsis;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+.notice .content span {
+    opacity: 0.8;
+}
+
+.notice .content span span {
+    color: var(--green);
+}

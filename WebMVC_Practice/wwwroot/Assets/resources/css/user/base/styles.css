@@ -1,0 +1,39 @@
+.bg-whitesmoke {
+    background-color: whitesmoke;
+}
+
+.padd-left {
+    padding-left: 30px;
+}
+
+.padd-right {
+    padding-right: 30px;
+}
+
+.padd-bottom {
+    padding-bottom: 30px;
+}
+
+.padd-top {
+    padding-top: 30px;
+}
+
+.pad-left {
+    padding-left: 15px;
+}
+
+.pad-right {
+    padding-right: 15px;
+}
+
+.pad-bottom {
+    padding-bottom: 15px;
+}
+
+.pad-top {
+    padding-top: 15px;
+}
+
+.template {
+    display: none;
+}

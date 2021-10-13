@@ -1,0 +1,75 @@
+header .headbar,
+header .headbar>div {
+    --height: 35px;
+    height: auto;
+    min-height: var(--height);
+    background-color: var(--green);
+    color: white;
+    cursor: default;
+    z-index: 3;
+}
+
+head .headbar:hover {
+    animation: moveDown 1s linear;
+}
+
+header .headbar.fixed>div {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+header .headbar :is(.right, .left) {
+    display: flex;
+    align-items: center;
+    height: var(--height);
+}
+
+header .headbar .right {
+    justify-content: flex-end;
+}
+
+header .language-setting {
+    --size: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .language-setting label {
+    cursor: pointer;
+}
+
+header .language-setting input {
+    display: none;
+}
+
+header .language-setting input:checked+label img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+header .language-setting img {
+    box-sizing: content-box;
+    height: calc(var(--size) / 1.7);
+    width: var(--size);
+    opacity: 0.7;
+}
+
+header .language-setting label:not(:first-child) {
+    margin-left: 10px;
+}
+
+header .headbar .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: var(--height);
+}
+
+header .headbar .icons a {
+    padding: 5px;
+    margin: 0px 5px;
+}

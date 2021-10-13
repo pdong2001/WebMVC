@@ -1,0 +1,129 @@
+.news .name {
+    margin: 10px 0px;
+}
+
+.news .img {
+    min-height: 15vw;
+    overflow: hidden;
+}
+
+.news .img img {
+    transition: transform 0.5s linear;
+}
+
+.news .name a {
+    text-decoration: none;
+    color: black;
+    font-size: var(--fs-large);
+    font-weight: 600;
+}
+
+.news .description {
+    opacity: 0.8;
+    font-size: var(--fs-medium);
+}
+
+.news .description>div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.news .description>div a {
+    text-decoration: underline;
+    color: var(--blue);
+    font-weight: 400;
+}
+
+.news .description p {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news .description div p:not(:last-child) {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid var(--dark);
+}
+
+.small .news {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.small .news .img {
+    min-height: unset;
+    width: 100%;
+    min-height: 60%;
+}
+
+.small .news .name {
+    margin: 0px;
+}
+
+.small .news .name a {
+    font-size: var(--fs-medium);
+}
+
+.small .news .info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.small .news .description {
+    display: flex;
+}
+
+.small .news .view-count {
+    display: none;
+}
+
+.small .news .description p {
+    opacity: 0.7;
+    border: none;
+}
+
+.news.horizontal.scope {
+    --size: 150px;
+}
+
+.news.horizontal {
+    --size: 100px;
+    display: flex;
+    justify-content: center;
+    height: var(--size);
+    margin: 10px 0px;
+}
+
+.news.horizontal :is(.img img, .img a, .img) {
+    height: var(--size);
+    width: var(--size);
+    min-height: var(--size);
+    object-fit: cover;
+}
+
+.news.horizontal .info {
+    width: calc(100% - var(--size));
+    padding-left: 10px;
+}
+
+.news.horizontal .info .name {
+    margin: 0px;
+}
+
+.news.horizontal .info .name a {
+    font-size: var(--fs-medium);
+    color: var(--color);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,83 @@
+.slider {
+    width: 100%;
+    margin-bottom: 30px !important;
+}
+
+.lazy.slider {
+    margin-bottom: 0px !important;
+}
+
+.lazy .slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+.slick-prev {
+    left: 20px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 20px;
+    z-index: 1;
+}
+
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    --size: 28px;
+    font-size: var(--size);
+    color: white;
+}
+
+.slick-slide {
+    opacity: 1;
+}
+
+.center.slider button::before {
+    color: var(--dark) !important;
+}
+
+.course {
+    height: 150px;
+    text-align: center;
+}
+
+.course img {
+    margin: 0px auto;
+}
+
+.course .name {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: var(--fs-medium-l);
+    font-weight: 400;
+    color: var(--blue);
+    margin: 10px auto;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.course .description {
+    font-size: var(--fs-small-m);
+}
