@@ -10,6 +10,7 @@ namespace Models
         public DbSet<Article> Articles { get; set; }
         public DbSet<CanBo> CanBos { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         public DataContext(DbContextOptions options):base(options)
         {
@@ -41,6 +42,14 @@ namespace Models
                 new User { ID = Guid.NewGuid(), Address = "Hưng Yên - Việt Nam", Name = $"Người dùng {Count}", PhoneNumber = "0987654321", DateOfBirth=DateTime.Now.AddDays(-15000), Domicile="Việt nam", Email="Email.NguoiDung@mail.mail", RegistryDate=DateTime.Now, AccName=$"Taikhoan{Count++}"},
                 new User { ID = Guid.NewGuid(), Address = "Hưng Yên - Việt Nam", Name = $"Người dùng {Count}", PhoneNumber = "0987654321", DateOfBirth=DateTime.Now.AddDays(-15000), Domicile="Việt nam", Email="Email.NguoiDung@mail.mail", RegistryDate=DateTime.Now, AccName=$"Taikhoan{Count++}"},
                 new User { ID = Guid.NewGuid(), Address = "Hưng Yên - Việt Nam", Name = $"Người dùng {Count}", PhoneNumber = "0987654321", DateOfBirth=DateTime.Now.AddDays(-15000), Domicile="Việt nam", Email="Email.NguoiDung@mail.mail", RegistryDate=DateTime.Now, AccName=$"Taikhoan{Count++}"}
+                );
+            Count = 1;
+            modelBuilder.Entity<Product>().HasData(
+                new Product { ID = Count, Descriptionn = $"Sản phẩm số {Count}", ImagePath = "", Name = $"Sản phẩm {Count++}", Price = 100000 },
+                new Product { ID = Count, Descriptionn = $"Sản phẩm số {Count}", ImagePath = "", Name = $"Sản phẩm {Count++}", Price = 100000 },
+                new Product { ID = Count, Descriptionn = $"Sản phẩm số {Count}", ImagePath = "", Name = $"Sản phẩm {Count++}", Price = 100000 },
+                new Product { ID = Count, Descriptionn = $"Sản phẩm số {Count}", ImagePath = "", Name = $"Sản phẩm {Count++}", Price = 100000 },
+                new Product { ID = Count, Descriptionn = $"Sản phẩm số {Count}", ImagePath = "", Name = $"Sản phẩm {Count++}", Price = 100000 }
                 );
         }
     }

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMVC_Practice", "WebMVC_Practice\WebMVC_Practice.csproj", "{AD83424D-D7B5-41AC-B10C-B724B9170BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{E0871B02-65AA-45FC-B910-0729AA3CB84E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{E0871B02-65AA-45FC-B910-0729AA3CB84E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{59412CE5-DFC3-4FB5-96CE-CE2DE119274D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{59412CE5-DFC3-4FB5-96CE-CE2DE119274D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

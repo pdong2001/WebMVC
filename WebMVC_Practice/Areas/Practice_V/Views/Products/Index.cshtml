@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Models.Entity.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Slider
+{
+
+<!-- Home slideder-->
+<div id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 header-top-right">
+                <div class="homeslider">
+                    <ul id="contenhomeslider">
+                        <li><img alt="Funky roots" src="~/images/slide/img1.jpg" title="Funky roots" /></li>
+                        <li><img alt="Funky roots" src="~/images/slide/img2.jpg" title="Funky roots" /></li>
+                        <li><img alt="Funky roots" src="~/images/slide/img3.jpg" title="Funky roots" /></li>
+                        <li><img alt="Funky roots" src="~/images/slide/img4.jpg" title="Funky roots" /></li>
+                        <li><img alt="Funky roots" src="~/images/slide/img5.jpg" title="Funky roots" /></li>
+                        <li><img alt="Funky roots" src="~/images/slide/img6.jpg" title="Funky roots" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+}
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<div class="demo_changer" id="demo_changer">
+    <div class="demo-icon fa fa-shopping-cart">
+        <span class="notify notify-left" id="count-cart">2</span>
+    </div>
+    <div class="form_holder">
+        <div class="cart-block">
+            <div class="cart-block-content">
+                <div class="cart-block-list">
+                    <div class="shop_cart">
+                        <table class="shop_table">
+                            <tbody id="show-cart">
+                                <!--/////////////////////////////////-->
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="toal-cart">
+                    <span>Total</span>
+                    <span class="toal-price pull-right" id="total_price">54,000đ</span>
+                </div>
+                <div class="cart-buttons">
+                    <a href="shoping-cart.html" class="btn-check-out">Payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-page">
+    <div class="container">
+        <!-- featured category  -->
+
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand"><a href="#"> <img alt="fashion" src="~/images/icon_like.png" /> Best Seller</a></div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+
+            </nav>
+            <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <ul class="product-list">
+                                @foreach (var item in Model)
+                                {
+                                    @Html.Partial("Product", item)
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end featured category -->
+
+
+        <div class="category-featured Vegetables">
+            <nav class="navbar nav-menu show-brand">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-brand"><a href="#"> <img alt="fashion" src="~/images/icon_paper-plane.png" /> Coming Soon </a></div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse">
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+
+            </nav>
+            <div class="product-featured clearfix">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="box-right">
+                            <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+                            <ul class="product-list">
+                                @foreach (var item in Model)
+                                {
+                                    @Html.Partial("Product", item)
+                                }
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end featured category -->
+    </div>
+</div>

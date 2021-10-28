@@ -120,6 +120,72 @@ namespace Models.Migrations
                     b.ToTable("ArticleTypes");
                 });
 
+            modelBuilder.Entity("Models.Entity.Product", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descriptionn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Descriptionn = "Sản phẩm số 1",
+                            ImagePath = "",
+                            Name = "Sản phẩm 1",
+                            Price = 100000
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Descriptionn = "Sản phẩm số 2",
+                            ImagePath = "",
+                            Name = "Sản phẩm 2",
+                            Price = 100000
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Descriptionn = "Sản phẩm số 3",
+                            ImagePath = "",
+                            Name = "Sản phẩm 3",
+                            Price = 100000
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Descriptionn = "Sản phẩm số 4",
+                            ImagePath = "",
+                            Name = "Sản phẩm 4",
+                            Price = 100000
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Descriptionn = "Sản phẩm số 5",
+                            ImagePath = "",
+                            Name = "Sản phẩm 5",
+                            Price = 100000
+                        });
+                });
+
             modelBuilder.Entity("Models.Entity.User", b =>
                 {
                     b.Property<Guid>("ID")
@@ -157,87 +223,87 @@ namespace Models.Migrations
                     b.HasData(
                         new
                         {
-                            ID = new Guid("91f48386-51fa-4f88-8f24-29c6b4170e0e"),
+                            ID = new Guid("915f719f-c2fb-47c2-b268-84901cba939f"),
                             AccName = "Taikhoan1",
                             Address = "Hưng Yên - Việt Nam",
-                            DateOfBirth = new DateTime(1980, 9, 18, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(2660),
+                            DateOfBirth = new DateTime(1980, 9, 26, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(2127),
                             Domicile = "Việt nam",
                             Email = "Email.NguoiDung@mail.mail",
                             Name = "Người dùng 1",
                             PhoneNumber = "0987654321",
-                            RegistryDate = new DateTime(2021, 10, 13, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8194)
+                            RegistryDate = new DateTime(2021, 10, 21, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(6813)
                         },
                         new
                         {
-                            ID = new Guid("e268e9dc-8e39-40c7-b9f0-f6b78e99180d"),
+                            ID = new Guid("13cd80ab-841c-4a19-a85c-c1169b0ffac1"),
                             AccName = "Taikhoan2",
                             Address = "Hưng Yên - Việt Nam",
-                            DateOfBirth = new DateTime(1980, 9, 18, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8923),
+                            DateOfBirth = new DateTime(1980, 9, 26, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7514),
                             Domicile = "Việt nam",
                             Email = "Email.NguoiDung@mail.mail",
                             Name = "Người dùng 2",
                             PhoneNumber = "0987654321",
-                            RegistryDate = new DateTime(2021, 10, 13, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8934)
+                            RegistryDate = new DateTime(2021, 10, 21, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7526)
                         },
                         new
                         {
-                            ID = new Guid("67f27ccd-066a-4e0d-8129-fcf55ee29d40"),
+                            ID = new Guid("73e84b7c-8c09-4d8a-80da-6919046ba39f"),
                             AccName = "Taikhoan3",
                             Address = "Hưng Yên - Việt Nam",
-                            DateOfBirth = new DateTime(1980, 9, 18, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8941),
+                            DateOfBirth = new DateTime(1980, 9, 26, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7532),
                             Domicile = "Việt nam",
                             Email = "Email.NguoiDung@mail.mail",
                             Name = "Người dùng 3",
                             PhoneNumber = "0987654321",
-                            RegistryDate = new DateTime(2021, 10, 13, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8943)
+                            RegistryDate = new DateTime(2021, 10, 21, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7534)
                         },
                         new
                         {
-                            ID = new Guid("6f0f20eb-7bc2-4216-aba4-357413f6ac3a"),
+                            ID = new Guid("0a41dd28-da70-44b2-a372-5e9f688b3c09"),
                             AccName = "Taikhoan4",
                             Address = "Hưng Yên - Việt Nam",
-                            DateOfBirth = new DateTime(1980, 9, 18, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8948),
+                            DateOfBirth = new DateTime(1980, 9, 26, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7539),
                             Domicile = "Việt nam",
                             Email = "Email.NguoiDung@mail.mail",
                             Name = "Người dùng 4",
                             PhoneNumber = "0987654321",
-                            RegistryDate = new DateTime(2021, 10, 13, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8949)
+                            RegistryDate = new DateTime(2021, 10, 21, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7541)
                         },
                         new
                         {
-                            ID = new Guid("31eb339f-d31f-4f01-b3d2-9c3ca8de3499"),
+                            ID = new Guid("0bcf5595-2df8-4911-ad67-f63869034045"),
                             AccName = "Taikhoan5",
                             Address = "Hưng Yên - Việt Nam",
-                            DateOfBirth = new DateTime(1980, 9, 18, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8955),
+                            DateOfBirth = new DateTime(1980, 9, 26, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7547),
                             Domicile = "Việt nam",
                             Email = "Email.NguoiDung@mail.mail",
                             Name = "Người dùng 5",
                             PhoneNumber = "0987654321",
-                            RegistryDate = new DateTime(2021, 10, 13, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8956)
+                            RegistryDate = new DateTime(2021, 10, 21, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7548)
                         },
                         new
                         {
-                            ID = new Guid("ecf5cfd5-e82a-4a2e-b2e7-92d4f5ea074b"),
+                            ID = new Guid("82861ec6-f9b9-43f9-8379-967a14575bcc"),
                             AccName = "Taikhoan6",
                             Address = "Hưng Yên - Việt Nam",
-                            DateOfBirth = new DateTime(1980, 9, 18, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8961),
+                            DateOfBirth = new DateTime(1980, 9, 26, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7566),
                             Domicile = "Việt nam",
                             Email = "Email.NguoiDung@mail.mail",
                             Name = "Người dùng 6",
                             PhoneNumber = "0987654321",
-                            RegistryDate = new DateTime(2021, 10, 13, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(8963)
+                            RegistryDate = new DateTime(2021, 10, 21, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7568)
                         },
                         new
                         {
-                            ID = new Guid("4916d35b-1d58-415b-986c-bd2aeb5a61c4"),
+                            ID = new Guid("2a6c6b0d-c375-435a-b961-a8e1d1cfadc3"),
                             AccName = "Taikhoan7",
                             Address = "Hưng Yên - Việt Nam",
-                            DateOfBirth = new DateTime(1980, 9, 18, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(9058),
+                            DateOfBirth = new DateTime(1980, 9, 26, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7574),
                             Domicile = "Việt nam",
                             Email = "Email.NguoiDung@mail.mail",
                             Name = "Người dùng 7",
                             PhoneNumber = "0987654321",
-                            RegistryDate = new DateTime(2021, 10, 13, 11, 27, 29, 81, DateTimeKind.Local).AddTicks(9060)
+                            RegistryDate = new DateTime(2021, 10, 21, 8, 40, 48, 344, DateTimeKind.Local).AddTicks(7575)
                         });
                 });
 

@@ -41,7 +41,7 @@ namespace WebMVC_Practice
             services.AddSingleton<IArticleService, ArticleService>();
             services.AddSingleton<IArticleTypeService, ArticleTypeService>();
             services.AddSingleton<IUserService, UserService>();
-            services.AddSingleton<IProductService, ProductService>();
+            services.AddScoped<IProductService, ProductService>();
             
             services.AddRazorPages();
         }

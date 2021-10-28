@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +31,9 @@ namespace Models.Entity
          public string Address { get; set; }
         [DisplayName("Nguyên quán")]
         public string Domicile { get; set; }
-
+        [DataType(DataType.Upload)]
+        [Display(Name = "File ảnh đại diện")]
+        [NotMapped]
+        public IFormFile Image { get; set; }
     }
 }

@@ -80,7 +80,25 @@
                             <li class="sidebar-item"><a class="sidebar-link" asp-area="Practice_III" asp-action="Index" asp-controller="Users">Người dùng</a></li>
                         </ul>
                     </li>
-
+                    <li class="sidebar-item">
+                        <a data-bs-target="#practice_iv" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                            <i class="bi bi-book-half"></i> Bài thực hành 4
+                        </a>
+                        <ul id="practice_iv" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#practice_iv" style="">
+                            <li class="sidebar-item"><a class="sidebar-link" asp-area="Practice_IV" asp-action="Index" asp-controller="Products">Sản phẩm</a></li>
+                            @*<li class="sidebar-item"><a class="sidebar-link" asp-area="Practice_III" asp-action="Index" asp-controller="Users">Người dùng</a></li>*@
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a data-bs-target="#practice_v" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+                            <i class="bi bi-book-half"></i> Bài thực hành 5
+                        </a>
+                        <ul id="practice_v" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#practice_v" style="">
+                            <li class="sidebar-item"><a class="sidebar-link" asp-area="Practice_V" asp-action="Index" asp-controller="Products">Sản phẩm</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" asp-area="Practice_IV" asp-action="Index" asp-controller="Products">Quản lý sản phẩm</a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" asp-area="Practice_III" asp-action="Index" asp-controller="Users">Người dùng</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>

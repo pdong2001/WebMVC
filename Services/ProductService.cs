@@ -1,4 +1,5 @@
-﻿using Models.Entity;
+﻿using Models;
+using Models.Entity;
 using Services.Interface;
 using System;
 using System.Collections.Generic;
@@ -10,44 +11,35 @@ namespace Services
 {
     public class ProductService : IProductService
     {
-        private List<Product> data;
 
-        public ProductService()
+        private readonly DataContext _context;
+
+        public ProductService(DataContext context)
         {
-            data = new List<Product>();
-            InitData();
+            _context = context;
         }
 
         public bool Creat(Product data)
         {
-            throw new NotImplementedException();
+            _context.Products.Add(data);
+            return _context.SaveChanges() > 0;
         }
 
         public bool Delete(Product data)
         {
-            throw new NotImplementedException();
+            _context.Products.Remove(_context.Products.FirstOrDefault(p => p.ID == data.ID));
+            return _context.SaveChanges() > 0;
         }
 
         public IEnumerable<Product> GetAll()
         {
-            return this.data.ToArray();
-        }
-
-        public void InitData()
-        {
-            data.AddRange(new Product[] {
-                new Product{ID = data.Count + 1, Descriptionn = $"Laptop {data.Count}", ImagePath="product.jpg", Name=$"Product {data.Count}", Price = 100 },
-                new Product{ID = data.Count + 1, Descriptionn = $"Laptop {data.Count}", ImagePath="product.jpg", Name=$"Product {data.Count}", Price = 100 },
-                new Product{ID = data.Count + 1, Descriptionn = $"Laptop {data.Count}", ImagePath="product.jpg", Name=$"Product {data.Count}", Price = 100 },
-                new Product{ID = data.Count + 1, Descriptionn = $"Laptop {data.Count}", ImagePath="product.jpg", Name=$"Product {data.Count}", Price = 100 },
-                new Product{ID = data.Count + 1, Descriptionn = $"Laptop {data.Count}", ImagePath="product.jpg", Name=$"Product {data.Count}", Price = 100 },
-                new Product{ID = data.Count + 1, Descriptionn = $"Laptop {data.Count}", ImagePath="product.jpg", Name=$"Product {data.Count}", Price = 100 },
-            });
+            return _context.Products.ToArray();
         }
 
         public bool Update(Product data)
         {
-            throw new NotImplementedException();
+            _context.Update(data);
+            return _context.SaveChanges() > 0;
         }
     }
 }

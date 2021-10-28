@@ -21,5 +21,10 @@ namespace WebMVC_Practice.Areas.Practice_II.Controllers
         {
             return View(_product.GetAll());
         }
+
+        public IActionResult Detail(int ID)
+        {
+            return View(_product.GetAll().FirstOrDefault(p => p.ID == ID));
+        }
     }
 }

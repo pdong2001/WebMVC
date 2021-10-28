@@ -39,7 +39,6 @@ D:\Repos\WebMVC\Services\obj\Debug\net5.0\Services.GeneratedMSBuildEditorConfig.
 D:\Repos\WebMVC\Services\obj\Debug\net5.0\Services.AssemblyInfoInputs.cache
 D:\Repos\WebMVC\Services\obj\Debug\net5.0\Services.AssemblyInfo.cs
 D:\Repos\WebMVC\Services\obj\Debug\net5.0\Services.csproj.CoreCompileInputs.cache
-D:\Repos\WebMVC\Services\obj\Debug\net5.0\Services.csproj.CopyComplete
 D:\Repos\WebMVC\Services\obj\Debug\net5.0\Services.dll
 D:\Repos\WebMVC\Services\obj\Debug\net5.0\ref\Services.dll
 D:\Repos\WebMVC\Services\obj\Debug\net5.0\Services.pdb

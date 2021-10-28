@@ -8,7 +8,6 @@ namespace Services.Interface
 {
     public interface ICRUD<T>
     {
-        void InitData();
         IEnumerable<T> GetAll();
         bool Creat(T data);
         bool Update(T data);
